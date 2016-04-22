@@ -12,15 +12,15 @@ public class Dog extends Pet implements Performer {
     return this.getName() + " wolfs down kibble";
   }
 
-  public void doStunt(String stunt) {
+  public String doStunt(String stunt) {
     if (stunt.equals("Sit up")) {
-      System.out.println(this.getName() + " sits up");
+      return (this.getName() + " sits up");
     }
     else if (stunt.equals("Beg")) {
-      System.out.println(this.getName() + " begs");
+      return (this.getName() + " begs");
     }
     else {
-      System.out.println(this.getName() + " doesn't know how to " + stunt);
+      return (this.getName() + " doesn't know how to " + stunt);
     }
   }
 }

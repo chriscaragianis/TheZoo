@@ -9,7 +9,7 @@ public class DogTest extends Test {
     
     public int[] runTests() {
         int[] result = new int[3];
-        result[0] = 2;
+        result[0] = 3;
         //testEat
         int indicator = testEat();
         if (indicator == 0) {
@@ -20,6 +20,13 @@ public class DogTest extends Test {
         }
         //testStuntList
         indicator = testStuntList();
+        if (indicator == 0) {
+          result[1]++;
+        }
+        if (indicator == -1) {
+          result[2]++;
+        }
+        indicator = testdoStunt_sitsup();
         if (indicator == 0) {
           result[1]++;
         }
@@ -45,7 +52,7 @@ public class DogTest extends Test {
     private int testStuntList() {
         String out = testDog.stuntList();
         if (out.equals("Sit up\nBeg")) {
-            System.out.println("Dog#stuntList: 👍");
+            System.out.println("Dog#stuntList : 👍");
             return 0;
         }
         else {
@@ -54,5 +61,17 @@ public class DogTest extends Test {
             return -1;
         }
     }
-    private int testdoStunt() {return 0;}
+   
+    private int testdoStunt_sitsup() {
+        String out = testDog.doStunt("Sit up");
+        if (out.equals("Fido sits up")) {
+            System.out.println("Dog#doStunt#\"Sit up\" : 👍");
+            return 0;
+        }
+        else {
+            System.out.println("Dog#doStunt#\"Sit up\": 💩  Expected \"" + out + 
+                               "\" to equal \"Fido sits up\"");
+            return -1;
+        }
+    }
 }
