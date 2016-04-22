@@ -42,7 +42,17 @@ public class DogTest extends Test {
             return -1;
         }
     }
-    private int testStuntList() {return 0;}
-    
-    
+    private int testStuntList() {
+        String out = testDog.stuntList();
+        if (out.equals("Sit up\nBeg")) {
+            System.out.println("Dog#stuntList: 👍");
+            return 0;
+        }
+        else {
+            System.out.println("Dog#stuntList: 💩  Expected \"" + out + 
+                               "\" to equal \"Sit up\nBeg\"");
+            return -1;
+        }
+    }
+    private int testdoStunt() {return 0;}
 }
