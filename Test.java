@@ -15,13 +15,14 @@ public abstract class Test {
     //
     //runTests should return [# of tests, # of passes, # of failures]
     public void displayResults() {
+        
+        System.out.println("\n\nTests for " + className + "\n");
         int[] results = runTests();
-        System.out.println("Tests for " + className + "\n");
         if (results[2] != 0) {
-            System.out.println("There were failures!");
+            System.out.println("\nThere were failures!");
         }
         else {
-          System.out.println("Success");
+          System.out.println("\nSuccess");
         }
         System.out.println("Examples: " + results[0] + 
                            ", Passed: " + results[1] + 

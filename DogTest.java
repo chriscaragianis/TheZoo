@@ -37,8 +37,8 @@ public class DogTest extends Test {
             return 0;
         }
         else {
-            System.out.println("Dog#eat:  💩  expected \"" + out + 
-                               "\" to equal \"Fido wolfs down kibble");
+            System.out.println("Dog#eat: 💩  Expected \"" + out + 
+                               "\" to equal \"Fido wolfs down kibble\"");
             return -1;
         }
     }
